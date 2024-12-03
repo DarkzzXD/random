@@ -2846,7 +2846,7 @@ function Library:Notify(Text, Time)
     local NotifySound = Instance.new("Sound", game:GetService("SoundService"))
     NotifySound.Name = "Notification"
     NotifySound.PlaybackSpeed = 1
-    NotifySound.Volume = 1.8
+    NotifySound.Volume = 1
     NotifySound.SoundId = "rbxassetid://5621616510"
     NotifySound.PlayOnRemove = true
     NotifySound:Destroy()
