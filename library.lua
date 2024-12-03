@@ -2844,11 +2844,14 @@ end;
 function Library:Notify(Text, Time)
     local XSize, YSize = Library:GetTextBounds(Text, Library.Font, 14);
     local NotifySound = Instance.new("Sound", workspace)
-    NotifySound.PlayOnRemove = true
     NotifySound.PlaybackSpeed = 1
     NotifySound.Volume = 1
     NotifySound.SoundId = "rbxassetid://5621616510"
-    NotifySound:Destroy()
+    NotifySound:Play()
+    task.spawn(function()
+        task.wait(Time+4)
+        NotifySound:Destroy()
+    end)
     YSize = YSize + 7
 
     local NotifyOuter = Library:Create('Frame', {
