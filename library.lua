@@ -2846,6 +2846,7 @@ function Library:Notify(Text, Time)
     local NotifySound = Instance.new("Sound", workspace)
     NotifySound.PlayOnRemove = true
     NotifySound.PlaybackSpeed = 1
+    NotifySound.Volume = 1
     NotifySound.SoundId = "rbxassetid://5621616510"
     NotifySound:Destroy()
     YSize = YSize + 7
