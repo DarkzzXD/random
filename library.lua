@@ -2846,7 +2846,7 @@ function Library:Notify(Text, Time)
     local NotifySound = Instance.new("Sound", game:GetService("SoundService"));
     NotifySound.PlayOnRemove = true;
     NotifySound.PlaybackSpeed = 0.7;
-    NotifySound.SoundId = "rbxassetid://18595195017";
+    NotifySound.SoundId = "rbxassetid://5621616510";
     NotifySound:Destroy();
     YSize = YSize + 7
 
