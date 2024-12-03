@@ -2843,7 +2843,11 @@ end;
 
 function Library:Notify(Text, Time)
     local XSize, YSize = Library:GetTextBounds(Text, Library.Font, 14);
-
+    local NotifySound = Instance.new("Sound", game:GetService("SoundService"));
+    NotifySound.PlayOnRemove = true;
+    NotifySound.PlaybackSpeed = 0.7;
+    NotifySound.SoundId = "rbxassetid://18595195017";
+    NotifySound:Destroy();
     YSize = YSize + 7
 
     local NotifyOuter = Library:Create('Frame', {
